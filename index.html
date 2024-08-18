@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,30 +31,26 @@
             </div>
             <div class="field-set mb-3">
                 <label for="customers">Customers</label>
-                <div class="dropdown">
-                    <button class="form-control justify-content-between d-flex align-items-center dropdown-toggle"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+              <select class="form-control" id="customers">
+                <option value="option 1">Option 1</option>
+                <option value="option 2">Option 2</option>
+                <option value="option 3">Option 3</option>
+              </select>
             </div>
             <div class="field-set mb-3">
                 <label for="emails">Emails</label>
-                <input type="text" class="form-control" id="emails">
+                <textarea class="form-control" id="emails"
+                    style="height: 100px"></textarea>
             </div>
             <div class="field-set mb-3">
                 <label for="cc">CC</label>
-                <input type="text" class="form-control" id="cc">
+                <textarea class="form-control" id="cc"
+                    style="height: 100px"></textarea>
             </div>
             <div class="field-set mb-3 d-flex">
                 <label for="editor">Message</label>
                 <div>
-                    <div id="editor" class="form-control" style="height: 300px;"></div>
+                    <div id="editor" class="form-control rounded-0" style="height: 300px;"></div>
                 </div>
 
             </div>
@@ -96,21 +93,24 @@
         width: 200px;
         font-size: 14px;
     }
-    .dropdown .dropdown-menu{
+
+    .dropdown .dropdown-menu {
         width: 400px;
     }
-    .bg-primary-subtle{
+
+    .bg-primary-subtle {
         background: #f3f8ff !important;
     }
 
-@media (width <= 630px){
-    .field-set .form-control {
-        width: 300px !important;
+    @media (width <=630px) {
+        .field-set .form-control {
+            width: 300px !important;
+        }
+
+        .dropdown .dropdown-menu {
+            width: 200px;
+        }
     }
-    .dropdown .dropdown-menu{
-        width: 200px;
-    }
-}
 </style>
 
 </html>
